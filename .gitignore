@@ -2,3 +2,6 @@
 data_augmented/
 dataset/
 *.zip
+
+# python
+__pycache__
