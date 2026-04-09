@@ -7,6 +7,7 @@ from torchvision import models
 import torch.nn as nn
 from torch.optim import Adam
 import torch
+from pathlib import Path
 
 def save_all_results(all_history, all_results, save_dir):
     results_df = pd.DataFrame(all_results)
@@ -79,8 +80,11 @@ def train_all(model_names: list,
               num_workers: int = 4, 
               batch_size: int = 128,
               epochs: int =10):
+    
     # device agnostic
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
+    # Generate the output directory and folders if its not there already
+    Path(save_dir).mkdir(exist_ok=True, parents=True)
     
     try:
         for model_name in model_names:
