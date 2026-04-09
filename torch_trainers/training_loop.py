@@ -1,4 +1,4 @@
-from tqdm.auto import tqdm
+from tqdm import tqdm
 import torch
 import pandas as pd
 import copy
@@ -54,8 +54,7 @@ def train_step(model,
     model.train()
     
     train_loss, train_acc = 0.0, 0.0
-    loop = tqdm(dataloader, desc="Training batches", leave=False)
-    for X, y in loop:
+    for X, y in tqdm(dataloader, desc="Training batches", leave=False):
         X, y = X.to(device), y.to(device)
         
         # Forward pass
@@ -84,10 +83,9 @@ def test_step(model,
               device):
     model.eval()
     test_loss, test_acc = 0.0, 0.0
-    loop = tqdm(dataloader, desc="Testing batches", leave=False)
-    
+   
     with torch.inference_mode():
-        for X, y in loop:
+        for X, y in tqdm(dataloader, desc="Testing batches", leave=False):
             X, y = X.to(device), y.to(device)
             
             y_pred = model(X)
