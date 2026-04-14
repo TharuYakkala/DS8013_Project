@@ -53,20 +53,20 @@ https://pytorch.org/get-started/locally/
 ### SRC (Python source files)
 
 #### Analysis
-[plotter.py](src\analysis\plotter.py)
+[plotter.py](src/analysis/plotter.py)
 - Visualization scripts that creates the comparisons of each model agaisnt various hyperparameters of dropout and weight decay.
 
 #### 🤖 torch_trainers
-[torch_custom_models.py](src\torch_trainers\torch_custom_models.py)
+[torch_custom_models.py](src/torch_trainers/torch_custom_models.py)
 - Contains the 3 models that freezes all weights and adds a classification head. Only the classification head is trained.
 
-[torch_data_prepper.py](src\torch_trainers\torch_data_prepper.py)
+[torch_data_prepper.py](src/torch_trainers/torch_data_prepper.py)
 - Dataset loading, and dataloader generation
 
-[train_all_models.py](src\torch_trainers\train_all_models.py)
+[train_all_models.py](src/torch_trainers/train_all_models.py)
 - Function that trains all models that utilizes the training loop.
 
-[training_loop.py](src\torch_trainers\training_loop.py)
+[training_loop.py](src/torch_trainers/training_loop.py)
 - The core training engine that contaisn the training step, testing step, and the combined full training loop.
 
 ### 🌄 viz
