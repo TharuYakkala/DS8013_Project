@@ -84,3 +84,12 @@ Output graphs of visualizations
 It took us around 6 hours fully train all the models for 10 epochs each.
 
 
+### CODE REFERENCES
+
+05.PyTorch Going Modular, Learn Pytorch for Deep Learning: Zero to Mastery book
+https://www.learnpytorch.io/05_pytorch_going_modular/
+
+Bourke, D.(2022) Pytorch-deep-learning. GitHub.
+https://github.com/mrdbourke/pytorch-deep-learning/
+
+
